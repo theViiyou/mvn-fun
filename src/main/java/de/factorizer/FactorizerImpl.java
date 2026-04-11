@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package de.factorizer;
 
 import java.util.ArrayList;
 import java.util.List;
