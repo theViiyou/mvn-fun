@@ -40,11 +40,17 @@ class FactorizerImpl implements Factorizer {
     public List<Integer> factorize(Integer n) {
         List<Integer> factors = new ArrayList<>();
         int temp = n;
-        for (int i = 2; i <= temp; i++) {
+        if (n < 0) {
+            throw new IllegalArgumentException("illegal negative parameter: n");
+        }
+        for (int i = 2; i * i <= temp; i++) {
             while (temp % i == 0) {
                 factors.add(i);
                 temp /= i;
             }
+        }
+        if (temp > 1) {
+            factors.add(temp);
         }
         return factors;
     }
