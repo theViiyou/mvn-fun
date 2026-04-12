@@ -3,8 +3,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.mycompany.app</groupId>
-  <artifactId>my-app</artifactId>
+  <groupId>de.factorizer</groupId>
+  <artifactId>factorizer</artifactId>
   <version>RELEASE-1.0.0</version>
 
   <name>my-app</name>
@@ -71,7 +71,7 @@
                 <manifest>
                   <addClasspath>true</addClasspath>
                   <classpathPrefix>lib/</classpathPrefix>
-                  <mainClass>com.mycompany.app.App</mainClass>
+                  <mainClass>de.factorizer.App</mainClass>
                 </manifest>
               </archive>
             </configuration>
@@ -106,7 +106,7 @@
                 <manifest>
                   <addClasspath>true</addClasspath>
                   <classpathPrefix>lib/</classpathPrefix>
-                  <mainClass>com.mycompany.app.App</mainClass>
+                  <mainClass>de.factorizer.App</mainClass>
                 </manifest>
               </archive>
             </configuration>
