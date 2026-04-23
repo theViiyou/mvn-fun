@@ -22,13 +22,14 @@ public class FactorizerTests {
     void test100_factorize_regular_cases() {
         // test code
         assertEquals(List.of(), factorizer.factorize(1L));
-        assertEquals(List.of(2), factorizer.factorize(2));
-        assertEquals(List.of(3), factorizer.factorize(3));
-        assertEquals(List.of(2, 2), factorizer.factorize(4));
-        assertEquals(List.of(3, 3, 3), factorizer.factorize(27));
-        assertEquals(List.of(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2), factorizer.factorize(65536));
-        assertEquals(List.of(7, 23, 59, 1153), factorizer.factorize(10952347));
-        assertEquals(List.of(100000039), factorizer.factorize(100000039));
+        assertEquals(List.of(2L), factorizer.factorize(2L));
+        assertEquals(List.of(3L), factorizer.factorize(3L));
+        assertEquals(List.of(2L, 2L), factorizer.factorize(4L));
+        assertEquals(List.of(3L, 3L, 3L), factorizer.factorize(27L));
+        assertEquals(List.of(2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L, 2L),
+                factorizer.factorize(65536L));
+        assertEquals(List.of(7L, 23L, 59L, 1153L), factorizer.factorize(10952347L));
+        assertEquals(List.of(100000039L), factorizer.factorize(100000039L));
 
     }
 
@@ -40,11 +41,11 @@ public class FactorizerTests {
     @Order(200)
     void test200_factorize_corner_cases() {
         // test code
-        assertEquals(List.of(), factorizer.factorize(0));
-        assertEquals(List.of(2, 3, 3, 7, 11, 31, 151, 331), factorizer.factorize(Integer.MAX_VALUE - 1));
+        assertEquals(List.of(), factorizer.factorize(0L));
+        assertEquals(List.of(2L, 3L, 715827883L, 2147483647L), factorizer.factorize(Long.MAX_VALUE - 1));
         // assertThrows(OutOfMemoryError.class, () ->
-        // factorizer.factorize(Integer.MAX_VALUE)); factorize angepasst auf i*i
-        assertEquals(List.of(2147483647), factorizer.factorize(Integer.MAX_VALUE));
+        // factorizer.factorize(Long.MAX_VALUE)); factorize angepasst auf i*i
+        assertEquals(List.of(7L, 7L, 73L, 127L, 337L, 92737L, 649657L), factorizer.factorize(Long.MAX_VALUE));
 
     }
 
@@ -55,9 +56,9 @@ public class FactorizerTests {
      * n".
      */
     @ParameterizedTest
-    @ValueSource(ints = { -1, -10, Integer.MIN_VALUE })
+    @ValueSource(longs = { -1, -10, Long.MIN_VALUE })
     @Order(300)
-    void test300_factorize_exception_cases(int n) {
+    void test300_factorize_exception_cases(Long n) {
         // test code
         Exception ex = assertThrows(IllegalArgumentException.class, () -> {
             factorizer.factorize(n);
