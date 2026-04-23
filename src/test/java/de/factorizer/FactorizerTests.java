@@ -21,7 +21,7 @@ public class FactorizerTests {
     @Order(100)
     void test100_factorize_regular_cases() {
         // test code
-        assertEquals(List.of(), factorizer.factorize(1));
+        assertEquals(List.of(), factorizer.factorize(1L));
         assertEquals(List.of(2), factorizer.factorize(2));
         assertEquals(List.of(3), factorizer.factorize(3));
         assertEquals(List.of(2, 2), factorizer.factorize(4));
