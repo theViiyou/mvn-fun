@@ -31,7 +31,7 @@ public interface Factorizer {
      * @param n number to factorize
      * @return factors
      */
-    public List<Integer> factorize(Integer n);
+    public List<Long> factorize(Long n);
 
     /**
      * Return reference to singleton instance of (hidden) implementation class
